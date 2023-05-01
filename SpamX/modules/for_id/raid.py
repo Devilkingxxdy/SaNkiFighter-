@@ -126,8 +126,13 @@ async def watcher(_, msg: Message):
        if check:
          await msg.reply_text(choice(raids.replyraids))
     else:
-       if int(msg.from_user.id) in RUSERs:
-         await msg.reply_text(choice(raids.replyraids))       
+       try:
+      
+         if int(msg.from_user.id) in RUSERs:
+           await msg.reply_text(choice(raids.replyraids)) 
+       except:
+         pass
+     
 
 @Client.on_message(filters.user(Sudos) & filters.command(["rlist", "raidlist"], prefixes=handler))
 @Client.on_message(filters.me & filters.command(["rlist", "raidlist"], prefixes=handler))
