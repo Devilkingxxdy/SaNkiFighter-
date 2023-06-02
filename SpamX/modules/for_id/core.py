@@ -126,7 +126,7 @@ async def stats(SpamX: Client, message: Message):
     stats += f"Admin in: `{admingc}` chats \n\n"
     stats += "------------- » «» « ------------- \n"
     stats += f"Time Taken `{ms}secs` \n"
-    stats += "© @RiZoeLX"
+    stats += "© @SaNkiFigHter1"
     await delete_reply(message, tx, stats) 
 
 @Client.on_chat_member_updated(filters.group, group=69)
